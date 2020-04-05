@@ -46,19 +46,20 @@ App = {
       });
     //return App.bindEvents();
   },
-  submit: async function(){
+  submit: function(){
     var tex = document.getElementById("ip");
     var times = tex.files.length;
     var i = 0;
-    while(i < times)
-    for await (const file of node.add(tex.files[i])){
-        if (file && file.cid) {
-            console.log('successfully stored', file.cid)
-    
-            await App.display(file.cid,i)
-            i++;
-        }
+    while(i < times){
+      var file = node.add(tex.files[i])
+      if (file && file.cid) {
+          console.log('successfully stored', file.cid)
+          App.display(file.cid,i)
+          i++;
+      }
     }
+    
+        
   },
   display: function(cid,times) {
       //document.getElementById('cid').innerText = document.getElementById('cid').innerText + cid + "\n";
