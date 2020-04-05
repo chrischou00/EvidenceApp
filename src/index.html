@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Power Transfer</title>
+    <title>Evidence System</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,31 +18,28 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://unpkg.com/ipfs-http-client/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract.js"></script>
     <script src="app.js"></script>
+    <script src="fipfs.js"></script>
   </head>
 
   <body>
-    <h1 class="text-center">Transfer Testing</h1><br><br>
-    <div class = "text-center">
-      Please Choose the number of days you want to rent:<br>
-      <select id = "daily">
-        <option value = "1">1 day</option>
-        <option value = "3">3 days</option>
-        <option value = "7">7 days</option>
-      </select>
-      <button type="button" class="btn btn-default" id="ttbtn" onclick="App.AskPermission()">Ask Permission</button>
-      <br><br><br>
-      <button type="button" class="btn btn-default" id="ttbtn" onclick="App.OpenDoor()">Open the door</button>
-
-     <!-- <button type="button" class="btn btn-default" id="ttbtn" onclick="App.showMaster()">Show</button>-->
-
+    <br><br><br><br><br><br><br><br><br>
+    <h1 class="text-center"><a href=add.html>新增證據</a></h1><br><br>
+    <h1 class="text-center"><a href=check.html>查詢相關證據</a></h1><br><br>
+    <input type="file" accept="image/*" id="ip" multiple="multiple"/><button onclick="App2.submit()">submit</button>
+    <div id="output" style="display: none">
+      <div>found in ipfs:</div>
+      <div class="content" id="cid">[ipfs cid]</div>
+      <img class="content" id="content">
     </div>
+    
   </body>
 
 </html>
