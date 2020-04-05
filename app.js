@@ -54,7 +54,7 @@ App = {
         if (file && file.cid) {
             console.log('successfully stored', file.cid)
     
-            await App2.display(file.cid,i)
+            await App.display(file.cid,i)
             i++;
         }
     }
