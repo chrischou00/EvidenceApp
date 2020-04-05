@@ -1,20 +1,21 @@
 
 App2 ={
     init: async function(){
-        var tex = document.getElementById("ip");
         const node = await Ipfs.create({ repo: String(Math.random() + Date.now()) })
 
         console.log('IPFS node is ready');
+        window.node = node;
 
     },
     submit: async function(){
+        var tex = document.getElementById("ip");
         console.log(tex.value);
         
         for await (const file of node.add(tex.value)){
             if (file && file.cid) {
                 console.log('successfully stored', file.cid)
         
-                await display(file.cid)
+                await App2.display(file.cid)
             }
         
         }
