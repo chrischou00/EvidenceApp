@@ -60,8 +60,7 @@ App = {
         }
     }
   },
-  display: async function(cid,times) {
-    for await (const data of node.cat(cid)) {
+  display: function(cid,times) {
       //document.getElementById('cid').innerText = document.getElementById('cid').innerText + cid + "\n";
       //document.getElementById('content').insertAdjacentHTML("afterend", "<img src = https://ipfs.io/ipfs/"+cid+">");
       if(times==0)
@@ -79,7 +78,6 @@ App = {
           })
         })
       }
-    }
   }
 
   /*AddAttribute: function(){
