@@ -80,7 +80,7 @@ App = {
               console.log(error);
             var account = accounts[0];
             console.log(account);
-            App.contracts.Cert.at('0x732277a4789521e2c6526ca1eb58cbd54188e8f8').then(function(instance){
+            App.contracts.Cert.deployed().then(function(instance){
               return instance.add(name, cid, num, about, {from:account, gas: 5000000});
             })
           })
