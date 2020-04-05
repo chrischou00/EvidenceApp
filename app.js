@@ -7,7 +7,7 @@ App = {
 
     console.log('IPFS node is ready');
     window.node = node;
-    return await App.initWeb3();
+    return App.initWeb3();
   },
 
   // Step 1：實作初始化 web3
@@ -46,39 +46,49 @@ App = {
       });
     //return App.bindEvents();
   },
-  submit: function(){
+  submit: async function(){
     var tex = document.getElementById("ip");
     var times = tex.files.length;
     var i = 0;
-    while(i < times){
-      var file = node.add(tex.files[i])
-      if (file && file.cid) {
-          console.log('successfully stored', file.cid)
-          App.display(file.cid,i)
-          i++;
+    var hash = [];
+    while(i < times)
+    {
+      for await (const file of node.add(tex.files[i])){
+        if (file && file.cid) {
+            console.log('successfully stored', file.cid)
+    
+            hash[i] = cid;
+            i++;
+        }
       }
     }
-    
-        
+    return App.display(hash)
   },
-  display: function(cid,times) {
+  display: function(cid) {
       //document.getElementById('cid').innerText = document.getElementById('cid').innerText + cid + "\n";
       //document.getElementById('content').insertAdjacentHTML("afterend", "<img src = https://ipfs.io/ipfs/"+cid+">");
-      if(times==0)
+      var i=0;
+      while(i<cid.length)
       {
-        var name = document.getElementById("name").value;
-        var num = document.getElementById("num").value;
-        var about = document.getElementById("about").value;
-        web3.eth.getAccounts(function(error, accounts){
-          if(error)
-            console.log(error);
-          var account = accounts[0];
-          console.log(account);
-          App.contracts.Cert.at(0x732277a4789521e2c6526ca1eb58cbd54188e8f8).then(function(instance){
-            return instance.add(name, cid, num, about, {from:account, gas: 5000000});
+        if(i==0)
+        {
+          var name = document.getElementById("name").value;
+          var num = document.getElementById("num").value;
+          var about = document.getElementById("about").value;
+          web3.eth.getAccounts(function(error, accounts){
+            if(error)
+              console.log(error);
+            var account = accounts[0];
+            console.log(account);
+            App.contracts.Cert.at('0x732277a4789521e2c6526ca1eb58cbd54188e8f8').then(function(instance){
+              return instance.add(name, cid, num, about, {from:account, gas: 5000000});
+            })
           })
-        })
+        }
+        i++;
       }
+      
+
   }
 
   /*AddAttribute: function(){
