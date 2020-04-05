@@ -1,0 +1,2161 @@
+{
+  "contractName": "Evidence",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "cases",
+      "outputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "hash",
+          "type": "string"
+        },
+        {
+          "name": "signer",
+          "type": "address"
+        },
+        {
+          "name": "about",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "hash",
+          "type": "string"
+        },
+        {
+          "name": "num",
+          "type": "uint256"
+        },
+        {
+          "name": "about",
+          "type": "string"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"hash\",\"type\":\"string\"},{\"name\":\"num\",\"type\":\"uint256\"},{\"name\":\"about\",\"type\":\"string\"}],\"name\":\"add\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"},{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"cases\",\"outputs\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"hash\",\"type\":\"string\"},{\"name\":\"signer\",\"type\":\"address\"},{\"name\":\"about\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/chris/Desktop/EvidenceApp/contracts/Evidence.sol\":\"Evidence\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/chris/Desktop/EvidenceApp/contracts/Evidence.sol\":{\"keccak256\":\"0xfa2404c89405b7278e989a447983e9646f8757128d13750d6d825d21f399ccaf\",\"urls\":[\"bzzr://b019f1a8c859cf901d49115f710275a7428789fdcacd6485c9c8927cd60dc3ef\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50600060018190555061095c806100286000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80634187a17d1461003b5780638b75792e1461022e575b600080fd5b61022c6004803603608081101561005157600080fd5b810190808035906020019064010000000081111561006e57600080fd5b82018360208201111561008057600080fd5b803590602001918460018302840111640100000000831117156100a257600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561010557600080fd5b82018360208201111561011757600080fd5b8035906020019184600183028401116401000000008311171561013957600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929080359060200190929190803590602001906401000000008111156101a657600080fd5b8201836020820111156101b857600080fd5b803590602001918460018302840111640100000000831117156101da57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506103ea565b005b6102646004803603604081101561024457600080fd5b81019080803590602001909291908035906020019092919050505061061b565b6040518080602001806020018573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001848103845288818151815260200191508051906020019080838360005b838110156102de5780820151818401526020810190506102c3565b50505050905090810190601f16801561030b5780820380516001836020036101000a031916815260200191505b50848103835287818151815260200191508051906020019080838360005b83811015610344578082015181840152602081019050610329565b50505050905090810190601f1680156103715780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b838110156103aa57808201518184015260208101905061038f565b50505050905090810190601f1680156103d75780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b6103f261084d565b84816000018190525083816020018190525033816040019073ffffffffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffffffffffffff16815250508181606001819052506000831415610534576000806001548152602001908152602001600020819080600181540180825580915050906001820390600052602060002090600402016000909192909190915060008201518160000190805190602001906104aa92919061088b565b5060208201518160010190805190602001906104c792919061088b565b5060408201518160020160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550606082015181600301908051906020019061052b92919061088b565b50505050610614565b6000808481526020019081526020016000208190806001815401808255809150509060018203906000526020600020906004020160009091929091909150600082015181600001908051906020019061058e92919061088b565b5060208201518160010190805190602001906105ab92919061088b565b5060408201518160020160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550606082015181600301908051906020019061060f92919061088b565b505050505b5050505050565b6000602052816000526040600020818154811061063457fe5b906000526020600020906004020160009150915050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106e15780601f106106b6576101008083540402835291602001916106e1565b820191906000526020600020905b8154815290600101906020018083116106c457829003601f168201915b505050505090806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561077f5780601f106107545761010080835404028352916020019161077f565b820191906000526020600020905b81548152906001019060200180831161076257829003601f168201915b5050505050908060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806003018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156108435780601f1061081857610100808354040283529160200191610843565b820191906000526020600020905b81548152906001019060200180831161082657829003601f168201915b5050505050905084565b60405180608001604052806060815260200160608152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106108cc57805160ff19168380011785556108fa565b828001600101855582156108fa579182015b828111156108f95782518255916020019190600101906108de565b5b509050610907919061090b565b5090565b61092d91905b80821115610929576000816000905550600101610911565b5090565b9056fea165627a7a723058205108d1969f0f21b6442e979e562cc3055c042a5de54f59a87e8ac400bc100a060029",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80634187a17d1461003b5780638b75792e1461022e575b600080fd5b61022c6004803603608081101561005157600080fd5b810190808035906020019064010000000081111561006e57600080fd5b82018360208201111561008057600080fd5b803590602001918460018302840111640100000000831117156100a257600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561010557600080fd5b82018360208201111561011757600080fd5b8035906020019184600183028401116401000000008311171561013957600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929080359060200190929190803590602001906401000000008111156101a657600080fd5b8201836020820111156101b857600080fd5b803590602001918460018302840111640100000000831117156101da57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506103ea565b005b6102646004803603604081101561024457600080fd5b81019080803590602001909291908035906020019092919050505061061b565b6040518080602001806020018573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200180602001848103845288818151815260200191508051906020019080838360005b838110156102de5780820151818401526020810190506102c3565b50505050905090810190601f16801561030b5780820380516001836020036101000a031916815260200191505b50848103835287818151815260200191508051906020019080838360005b83811015610344578082015181840152602081019050610329565b50505050905090810190601f1680156103715780820380516001836020036101000a031916815260200191505b50848103825285818151815260200191508051906020019080838360005b838110156103aa57808201518184015260208101905061038f565b50505050905090810190601f1680156103d75780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b6103f261084d565b84816000018190525083816020018190525033816040019073ffffffffffffffffffffffffffffffffffffffff16908173ffffffffffffffffffffffffffffffffffffffff16815250508181606001819052506000831415610534576000806001548152602001908152602001600020819080600181540180825580915050906001820390600052602060002090600402016000909192909190915060008201518160000190805190602001906104aa92919061088b565b5060208201518160010190805190602001906104c792919061088b565b5060408201518160020160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550606082015181600301908051906020019061052b92919061088b565b50505050610614565b6000808481526020019081526020016000208190806001815401808255809150509060018203906000526020600020906004020160009091929091909150600082015181600001908051906020019061058e92919061088b565b5060208201518160010190805190602001906105ab92919061088b565b5060408201518160020160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550606082015181600301908051906020019061060f92919061088b565b505050505b5050505050565b6000602052816000526040600020818154811061063457fe5b906000526020600020906004020160009150915050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156106e15780601f106106b6576101008083540402835291602001916106e1565b820191906000526020600020905b8154815290600101906020018083116106c457829003601f168201915b505050505090806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561077f5780601f106107545761010080835404028352916020019161077f565b820191906000526020600020905b81548152906001019060200180831161076257829003601f168201915b5050505050908060020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1690806003018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156108435780601f1061081857610100808354040283529160200191610843565b820191906000526020600020905b81548152906001019060200180831161082657829003601f168201915b5050505050905084565b60405180608001604052806060815260200160608152602001600073ffffffffffffffffffffffffffffffffffffffff168152602001606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106108cc57805160ff19168380011785556108fa565b828001600101855582156108fa579182015b828111156108f95782518255916020019190600101906108de565b5b509050610907919061090b565b5090565b61092d91905b80821115610929576000816000905550600101610911565b5090565b9056fea165627a7a723058205108d1969f0f21b6442e979e562cc3055c042a5de54f59a87e8ac400bc100a060029",
+  "sourceMap": "37:948:2:-;;;269:50;8:9:-1;5:2;;;30:1;27;20:12;5:2;269:50:2;310:1;299:8;:12;;;;37:948;;;;;;",
+  "deployedSourceMap": "37:948:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;37:948:2;;;;;;;;;;;;;;;;;;;;;;;;325:419;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;325:419:2;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;325:419:2;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;325:419:2;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;325:419:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;325:419:2;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;325:419:2;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;325:419:2;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;325:419:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;325:419:2;;;;;;;;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;325:419:2;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;325:419:2;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;325:419:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;325:419:2;;;;;;;;;;;;;;;:::i;:::-;;189:39;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;189:39:2;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;189:39:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;189:39:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;189:39:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;325:419;432:21;;:::i;:::-;476:4;464;:9;;:16;;;;503:4;491;:9;;:16;;;;532:10;518:4;:11;;:24;;;;;;;;;;;566:5;553:4;:10;;:18;;;;600:1;595:3;:6;592:145;;;627:5;:15;633:8;;627:15;;;;;;;;;;;648:4;627:26;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;627:26:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;592:145;;;704:5;:10;710:3;704:10;;;;;;;;;;;720:4;704:21;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;704:21:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;592:145;325:419;;;;;:::o;189:39::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;37:948::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity > 0.4.0 <= 0.6.0;\r\n\r\ncontract Evidence{\r\n    \r\n    struct attribute{\r\n        string name;\r\n        string hash;\r\n        address signer;\r\n        string about;\r\n    }\r\n    mapping(uint=>attribute[]) public cases;\r\n    uint private case_num;\r\n    \r\n    constructor()public{\r\n        case_num = 0;\r\n    }\r\n    function add(string memory name, string memory hash, uint num, string memory about) public{\r\n    \r\n        attribute memory temp;\r\n        temp.name = name;\r\n        temp.hash = hash;\r\n        temp.signer = msg.sender;\r\n        temp.about = about;\r\n        \r\n        if(num==0)\r\n        {\r\n            cases[case_num].push(temp);\r\n        }\r\n        else\r\n        {\r\n            cases[num].push(temp);\r\n        }\r\n    }\r\n    /*function show(uint num, uint item)public view returns(string memory, string memory, address, string memory){\r\n        return (cases[num][item].name, cases[num][item].hash, cases[num][item].signer, cases[num][item].about);\r\n    }*/\r\n}",
+  "sourcePath": "C:/Users/chris/Desktop/EvidenceApp/contracts/Evidence.sol",
+  "ast": {
+    "absolutePath": "/C/Users/chris/Desktop/EvidenceApp/contracts/Evidence.sol",
+    "exportedSymbols": {
+      "Evidence": [
+        1427
+      ]
+    },
+    "id": 1428,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1342,
+        "literals": [
+          "solidity",
+          ">",
+          "0.4",
+          ".0",
+          "<=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1427,
+        "linearizedBaseContracts": [
+          1427
+        ],
+        "name": "Evidence",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Evidence.attribute",
+            "id": 1351,
+            "members": [
+              {
+                "constant": false,
+                "id": 1344,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 1351,
+                "src": "94:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1343,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "94:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1346,
+                "name": "hash",
+                "nodeType": "VariableDeclaration",
+                "scope": 1351,
+                "src": "116:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1345,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "116:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1348,
+                "name": "signer",
+                "nodeType": "VariableDeclaration",
+                "scope": 1351,
+                "src": "138:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1347,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "138:7:2",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1350,
+                "name": "about",
+                "nodeType": "VariableDeclaration",
+                "scope": 1351,
+                "src": "163:12:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1349,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "163:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "attribute",
+            "nodeType": "StructDefinition",
+            "scope": 1427,
+            "src": "67:116:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1356,
+            "name": "cases",
+            "nodeType": "VariableDeclaration",
+            "scope": 1427,
+            "src": "189:39:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_attribute_$1351_storage_$dyn_storage_$",
+              "typeString": "mapping(uint256 => struct Evidence.attribute[])"
+            },
+            "typeName": {
+              "id": 1355,
+              "keyType": {
+                "id": 1352,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "197:4:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "189:26:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_attribute_$1351_storage_$dyn_storage_$",
+                "typeString": "mapping(uint256 => struct Evidence.attribute[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 1353,
+                  "name": "attribute",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 1351,
+                  "src": "203:9:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_attribute_$1351_storage_ptr",
+                    "typeString": "struct Evidence.attribute"
+                  }
+                },
+                "id": 1354,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "203:11:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_attribute_$1351_storage_$dyn_storage_ptr",
+                  "typeString": "struct Evidence.attribute[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1358,
+            "name": "case_num",
+            "nodeType": "VariableDeclaration",
+            "scope": 1427,
+            "src": "235:21:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1357,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "235:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 1365,
+              "nodeType": "Block",
+              "src": "288:31:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1363,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1361,
+                      "name": "case_num",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1358,
+                      "src": "299:8:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 1362,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "310:1:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "299:12:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1364,
+                  "nodeType": "ExpressionStatement",
+                  "src": "299:12:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1366,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1359,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "280:2:2"
+            },
+            "returnParameters": {
+              "id": 1360,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "288:0:2"
+            },
+            "scope": 1427,
+            "src": "269:50:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1425,
+              "nodeType": "Block",
+              "src": "415:329:2",
+              "statements": [
+                {
+                  "assignments": [
+                    1378
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1378,
+                      "name": "temp",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1425,
+                      "src": "432:21:2",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                        "typeString": "struct Evidence.attribute"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 1377,
+                        "name": "attribute",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 1351,
+                        "src": "432:9:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_attribute_$1351_storage_ptr",
+                          "typeString": "struct Evidence.attribute"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1379,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "432:21:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1384,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1380,
+                        "name": "temp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1378,
+                        "src": "464:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                          "typeString": "struct Evidence.attribute memory"
+                        }
+                      },
+                      "id": 1382,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "name",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1344,
+                      "src": "464:9:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1383,
+                      "name": "name",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1368,
+                      "src": "476:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "464:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "id": 1385,
+                  "nodeType": "ExpressionStatement",
+                  "src": "464:16:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1390,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1386,
+                        "name": "temp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1378,
+                        "src": "491:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                          "typeString": "struct Evidence.attribute memory"
+                        }
+                      },
+                      "id": 1388,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "hash",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1346,
+                      "src": "491:9:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1389,
+                      "name": "hash",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1370,
+                      "src": "503:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "491:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "id": 1391,
+                  "nodeType": "ExpressionStatement",
+                  "src": "491:16:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1397,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1392,
+                        "name": "temp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1378,
+                        "src": "518:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                          "typeString": "struct Evidence.attribute memory"
+                        }
+                      },
+                      "id": 1394,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "signer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1348,
+                      "src": "518:11:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1395,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1606,
+                        "src": "532:3:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 1396,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "532:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "518:24:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 1398,
+                  "nodeType": "ExpressionStatement",
+                  "src": "518:24:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1403,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1399,
+                        "name": "temp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1378,
+                        "src": "553:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                          "typeString": "struct Evidence.attribute memory"
+                        }
+                      },
+                      "id": 1401,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "about",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1350,
+                      "src": "553:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1402,
+                      "name": "about",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1374,
+                      "src": "566:5:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "553:18:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "id": 1404,
+                  "nodeType": "ExpressionStatement",
+                  "src": "553:18:2"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1407,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 1405,
+                      "name": "num",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1372,
+                      "src": "595:3:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 1406,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "600:1:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "595:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 1423,
+                    "nodeType": "Block",
+                    "src": "689:48:2",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 1420,
+                              "name": "temp",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1378,
+                              "src": "720:4:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                                "typeString": "struct Evidence.attribute memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                                "typeString": "struct Evidence.attribute memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 1416,
+                                "name": "cases",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1356,
+                                "src": "704:5:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_attribute_$1351_storage_$dyn_storage_$",
+                                  "typeString": "mapping(uint256 => struct Evidence.attribute storage ref[] storage ref)"
+                                }
+                              },
+                              "id": 1418,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 1417,
+                                "name": "num",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1372,
+                                "src": "710:3:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "704:10:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_attribute_$1351_storage_$dyn_storage",
+                                "typeString": "struct Evidence.attribute storage ref[] storage ref"
+                              }
+                            },
+                            "id": 1419,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "704:15:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_attribute_$1351_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct Evidence.attribute storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 1421,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "704:21:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 1422,
+                        "nodeType": "ExpressionStatement",
+                        "src": "704:21:2"
+                      }
+                    ]
+                  },
+                  "id": 1424,
+                  "nodeType": "IfStatement",
+                  "src": "592:145:2",
+                  "trueBody": {
+                    "id": 1415,
+                    "nodeType": "Block",
+                    "src": "612:53:2",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 1412,
+                              "name": "temp",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1378,
+                              "src": "648:4:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                                "typeString": "struct Evidence.attribute memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                                "typeString": "struct Evidence.attribute memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 1408,
+                                "name": "cases",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1356,
+                                "src": "627:5:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_attribute_$1351_storage_$dyn_storage_$",
+                                  "typeString": "mapping(uint256 => struct Evidence.attribute storage ref[] storage ref)"
+                                }
+                              },
+                              "id": 1410,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 1409,
+                                "name": "case_num",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1358,
+                                "src": "633:8:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "627:15:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_attribute_$1351_storage_$dyn_storage",
+                                "typeString": "struct Evidence.attribute storage ref[] storage ref"
+                              }
+                            },
+                            "id": 1411,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "627:20:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_attribute_$1351_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct Evidence.attribute storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 1413,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "627:26:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 1414,
+                        "nodeType": "ExpressionStatement",
+                        "src": "627:26:2"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1426,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1375,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1368,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1426,
+                  "src": "338:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1367,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "338:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1370,
+                  "name": "hash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1426,
+                  "src": "358:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1369,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "358:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1372,
+                  "name": "num",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1426,
+                  "src": "378:8:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1371,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "378:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1374,
+                  "name": "about",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1426,
+                  "src": "388:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1373,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "388:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "337:71:2"
+            },
+            "returnParameters": {
+              "id": 1376,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "415:0:2"
+            },
+            "scope": 1427,
+            "src": "325:419:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1428,
+        "src": "37:948:2"
+      }
+    ],
+    "src": "0:985:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/chris/Desktop/EvidenceApp/contracts/Evidence.sol",
+    "exportedSymbols": {
+      "Evidence": [
+        1427
+      ]
+    },
+    "id": 1428,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1342,
+        "literals": [
+          "solidity",
+          ">",
+          "0.4",
+          ".0",
+          "<=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1427,
+        "linearizedBaseContracts": [
+          1427
+        ],
+        "name": "Evidence",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Evidence.attribute",
+            "id": 1351,
+            "members": [
+              {
+                "constant": false,
+                "id": 1344,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 1351,
+                "src": "94:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1343,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "94:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1346,
+                "name": "hash",
+                "nodeType": "VariableDeclaration",
+                "scope": 1351,
+                "src": "116:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1345,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "116:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1348,
+                "name": "signer",
+                "nodeType": "VariableDeclaration",
+                "scope": 1351,
+                "src": "138:14:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 1347,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "138:7:2",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1350,
+                "name": "about",
+                "nodeType": "VariableDeclaration",
+                "scope": 1351,
+                "src": "163:12:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 1349,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "163:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "attribute",
+            "nodeType": "StructDefinition",
+            "scope": 1427,
+            "src": "67:116:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1356,
+            "name": "cases",
+            "nodeType": "VariableDeclaration",
+            "scope": 1427,
+            "src": "189:39:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_attribute_$1351_storage_$dyn_storage_$",
+              "typeString": "mapping(uint256 => struct Evidence.attribute[])"
+            },
+            "typeName": {
+              "id": 1355,
+              "keyType": {
+                "id": 1352,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "197:4:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "189:26:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_attribute_$1351_storage_$dyn_storage_$",
+                "typeString": "mapping(uint256 => struct Evidence.attribute[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 1353,
+                  "name": "attribute",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 1351,
+                  "src": "203:9:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_attribute_$1351_storage_ptr",
+                    "typeString": "struct Evidence.attribute"
+                  }
+                },
+                "id": 1354,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "203:11:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_attribute_$1351_storage_$dyn_storage_ptr",
+                  "typeString": "struct Evidence.attribute[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1358,
+            "name": "case_num",
+            "nodeType": "VariableDeclaration",
+            "scope": 1427,
+            "src": "235:21:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1357,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "235:4:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          },
+          {
+            "body": {
+              "id": 1365,
+              "nodeType": "Block",
+              "src": "288:31:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1363,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1361,
+                      "name": "case_num",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1358,
+                      "src": "299:8:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 1362,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "310:1:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "299:12:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1364,
+                  "nodeType": "ExpressionStatement",
+                  "src": "299:12:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1366,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1359,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "280:2:2"
+            },
+            "returnParameters": {
+              "id": 1360,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "288:0:2"
+            },
+            "scope": 1427,
+            "src": "269:50:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1425,
+              "nodeType": "Block",
+              "src": "415:329:2",
+              "statements": [
+                {
+                  "assignments": [
+                    1378
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1378,
+                      "name": "temp",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1425,
+                      "src": "432:21:2",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                        "typeString": "struct Evidence.attribute"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 1377,
+                        "name": "attribute",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 1351,
+                        "src": "432:9:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_attribute_$1351_storage_ptr",
+                          "typeString": "struct Evidence.attribute"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1379,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "432:21:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1384,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1380,
+                        "name": "temp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1378,
+                        "src": "464:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                          "typeString": "struct Evidence.attribute memory"
+                        }
+                      },
+                      "id": 1382,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "name",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1344,
+                      "src": "464:9:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1383,
+                      "name": "name",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1368,
+                      "src": "476:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "464:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "id": 1385,
+                  "nodeType": "ExpressionStatement",
+                  "src": "464:16:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1390,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1386,
+                        "name": "temp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1378,
+                        "src": "491:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                          "typeString": "struct Evidence.attribute memory"
+                        }
+                      },
+                      "id": 1388,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "hash",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1346,
+                      "src": "491:9:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1389,
+                      "name": "hash",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1370,
+                      "src": "503:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "491:16:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "id": 1391,
+                  "nodeType": "ExpressionStatement",
+                  "src": "491:16:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1397,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1392,
+                        "name": "temp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1378,
+                        "src": "518:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                          "typeString": "struct Evidence.attribute memory"
+                        }
+                      },
+                      "id": 1394,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "signer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1348,
+                      "src": "518:11:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1395,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1606,
+                        "src": "532:3:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 1396,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "532:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "518:24:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 1398,
+                  "nodeType": "ExpressionStatement",
+                  "src": "518:24:2"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1403,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1399,
+                        "name": "temp",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1378,
+                        "src": "553:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                          "typeString": "struct Evidence.attribute memory"
+                        }
+                      },
+                      "id": 1401,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "about",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1350,
+                      "src": "553:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1402,
+                      "name": "about",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1374,
+                      "src": "566:5:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "553:18:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "id": 1404,
+                  "nodeType": "ExpressionStatement",
+                  "src": "553:18:2"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1407,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 1405,
+                      "name": "num",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1372,
+                      "src": "595:3:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 1406,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "600:1:2",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "595:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 1423,
+                    "nodeType": "Block",
+                    "src": "689:48:2",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 1420,
+                              "name": "temp",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1378,
+                              "src": "720:4:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                                "typeString": "struct Evidence.attribute memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                                "typeString": "struct Evidence.attribute memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 1416,
+                                "name": "cases",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1356,
+                                "src": "704:5:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_attribute_$1351_storage_$dyn_storage_$",
+                                  "typeString": "mapping(uint256 => struct Evidence.attribute storage ref[] storage ref)"
+                                }
+                              },
+                              "id": 1418,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 1417,
+                                "name": "num",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1372,
+                                "src": "710:3:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "704:10:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_attribute_$1351_storage_$dyn_storage",
+                                "typeString": "struct Evidence.attribute storage ref[] storage ref"
+                              }
+                            },
+                            "id": 1419,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "704:15:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_attribute_$1351_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct Evidence.attribute storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 1421,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "704:21:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 1422,
+                        "nodeType": "ExpressionStatement",
+                        "src": "704:21:2"
+                      }
+                    ]
+                  },
+                  "id": 1424,
+                  "nodeType": "IfStatement",
+                  "src": "592:145:2",
+                  "trueBody": {
+                    "id": 1415,
+                    "nodeType": "Block",
+                    "src": "612:53:2",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 1412,
+                              "name": "temp",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1378,
+                              "src": "648:4:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                                "typeString": "struct Evidence.attribute memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_attribute_$1351_memory_ptr",
+                                "typeString": "struct Evidence.attribute memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 1408,
+                                "name": "cases",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1356,
+                                "src": "627:5:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_attribute_$1351_storage_$dyn_storage_$",
+                                  "typeString": "mapping(uint256 => struct Evidence.attribute storage ref[] storage ref)"
+                                }
+                              },
+                              "id": 1410,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 1409,
+                                "name": "case_num",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1358,
+                                "src": "633:8:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "627:15:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_attribute_$1351_storage_$dyn_storage",
+                                "typeString": "struct Evidence.attribute storage ref[] storage ref"
+                              }
+                            },
+                            "id": 1411,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "627:20:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_attribute_$1351_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct Evidence.attribute storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 1413,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "627:26:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 1414,
+                        "nodeType": "ExpressionStatement",
+                        "src": "627:26:2"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1426,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1375,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1368,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1426,
+                  "src": "338:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1367,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "338:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1370,
+                  "name": "hash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1426,
+                  "src": "358:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1369,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "358:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1372,
+                  "name": "num",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1426,
+                  "src": "378:8:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1371,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "378:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1374,
+                  "name": "about",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1426,
+                  "src": "388:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1373,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "388:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "337:71:2"
+            },
+            "returnParameters": {
+              "id": 1376,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "415:0:2"
+            },
+            "scope": 1427,
+            "src": "325:419:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1428,
+        "src": "37:948:2"
+      }
+    ],
+    "src": "0:985:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0x732277a4789521e2c6526ca1EB58cbD54188e8f8",
+      "transactionHash": "0xe88a4b113f7e2939b6ba009e400e473d357b77304bf0ee0d16bc9acecc174ee2"
+    }
+  },
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2020-04-05T22:13:46.539Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

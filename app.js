@@ -3,23 +3,10 @@ App = {
   contracts: {},
 
   init: async function () {
-    /*fetch('pets.json')
-      .then(function (res) {
-        return res.json();
-      })
-      .then(function (data) {
-       var petsRow = $('#petsRow');
-        var petTemplate = $('#petTemplate');
-        for (i = 0; i < data.length; i++) {
-          petTemplate.find('.panel-title').text(data[i].name);
-          petTemplate.find('img').attr('src', data[i].picture);
-          petTemplate.find('.pet-breed').text(data[i].breed);
-          petTemplate.find('.pet-age').text(data[i].age);
-          petTemplate.find('.pet-location').text(data[i].location);
-          petTemplate.find('.btn-adopt').attr('data-id', data[i].id);
-          petsRow.append(petTemplate.html());
-        }
-      });*/
+    const node = await Ipfs.create({ repo: String(Math.random() + Date.now()) })
+
+    console.log('IPFS node is ready');
+    window.node = node;
     return await App.initWeb3();
   },
 
@@ -46,21 +33,7 @@ App = {
 
   // Step 2：實例化智能合約
   initContract: function () {
-
-    /*fetch('Adoption.json')
-      .then(function (res) {
-        return res.json();
-      })
-      .then(function (data) {
-        // data 是符合 truffle contractschema 格式的 JSON 檔案
-        var AdoptionArtifact = data;
-        App.contracts.Adoption = TruffleContract(AdoptionArtifact);
-        // 設定合約的 provider
-        App.contracts.Adoption.setProvider(App.web3Provider);
-        // 執行 App.markAdopted() 函示
-        return App.markAdopted();
-      });*/
-    fetch('Cert.json')
+    fetch('Evidence.json')
       .then(function(res) {
         return res.json();
       })
@@ -72,9 +45,43 @@ App = {
       });
     //return App.bindEvents();
   },
+  submit: async function(){
+    var tex = document.getElementById("ip");
+    var times = tex.files.length;
+    var i = 0;
+    while(i < times)
+    for await (const file of node.add(tex.files[i])){
+        if (file && file.cid) {
+            console.log('successfully stored', file.cid)
+    
+            await App2.display(file.cid,i)
+            i++;
+        }
+    }
+  },
+  display: async function(cid,times) {
+    for await (const data of node.cat(cid)) {
+      //document.getElementById('cid').innerText = document.getElementById('cid').innerText + cid + "\n";
+      //document.getElementById('content').insertAdjacentHTML("afterend", "<img src = https://ipfs.io/ipfs/"+cid+">");
+      if(times==0)
+      {
+        var name = document.getElementById("name").value;
+        var num = document.getElementById("num").value;
+        var about = document.getElementById("about").value;
+        web3.eth.getAccounts(function(error, accounts){
+          if(error)
+            console.log(error);
+          var account = accounts[0];
+          console.log(account);
+          App.contracts.Cert.deployed().then(function(instance){
+            return instance.add(name, cid, num, about, {from:account, gas: 5000000});
+          })
+        })
+      }
+    }
+  }
 
-  AddAttribute: function(){
-    var deployed;
+  /*AddAttribute: function(){
     var name = document.getElementById("name").value;
     var data = document.getElementById("data").value;
     web3.eth.getAccounts(function(error, accounts){
@@ -82,7 +89,6 @@ App = {
         console.log(error);
       var account = accounts[0];
       App.contracts.Cert.deployed().then(function(instance){
-        deployed = instance;
         return instance.addAttribute(name, data, {from: account, gas: 5000000});
       })
       .then(function(result){
@@ -208,7 +214,7 @@ App = {
         })
       })
     })
-  }
+  }*/
   /*
   // 標記已經被領養的寵物
   markAdopted: function () { // Step 3
