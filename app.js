@@ -50,43 +50,44 @@ App = {
     var tex = document.getElementById("ip");
     var times = tex.files.length;
     var i = 0;
-    var hash = [];
     while(i < times)
     {
       for await (const file of node.add(tex.files[i])){
         if (file && file.cid) {
             console.log('successfully stored', file.cid)
     
-            hash[i] = cid;
+            await App.display(file.cid,i)
             i++;
         }
       }
     }
-    return App.display(hash)
   },
-  display: function(cid) {
+  display: async function(cid,times) {
+    for await (const data of node.cat(cid)) {
       //document.getElementById('cid').innerText = document.getElementById('cid').innerText + cid + "\n";
       //document.getElementById('content').insertAdjacentHTML("afterend", "<img src = https://ipfs.io/ipfs/"+cid+">");
-      var i=0;
-      while(i<cid.length)
+      if(times==0)
       {
-        if(i==0)
-        {
-          var name = document.getElementById("name").value;
-          var num = document.getElementById("num").value;
-          var about = document.getElementById("about").value;
-          web3.eth.getAccounts(function(error, accounts){
-            if(error)
-              console.log(error);
-            var account = accounts[0];
-            console.log(account);
-            App.contracts.Cert.deployed().then(function(instance){
-              return instance.add(name, cid, num, about, {from:account, gas: 5000000});
-            })
+        var name = document.getElementById("name").value;
+        var num = document.getElementById("num").value;
+        var about = document.getElementById("about").value;
+        web3.eth.getAccounts(function(error, accounts){
+          if(error)
+          {
+            console.log(error);
+          }
+          var account = accounts[0];
+          console.log(name);
+          console.log(cid.string);
+          console.log(num);
+          console.log(about);
+          App.contracts.Cert.deployed().then(function(instance){
+            return instance.add(name, cid.string, num, about, {from: account, gas: 5000000});
           })
-        }
-        i++;
+        })
       }
+    }
+        
       
 
   }
