@@ -9,26 +9,28 @@ App2 ={
     },
     submit: async function(){
         var tex = document.getElementById("ip");
-        console.log(tex.files[0].name);
-        
-        for await (const file of node.add(tex.files[0])){
+        var times = tex.files.length;
+        var i = 0;
+        while(i < times)
+        for await (const file of node.add(tex.files[i])){
             if (file && file.cid) {
                 console.log('successfully stored', file.cid)
         
-                await App2.display(file.cid)
+                await App.display(file.cid,i)
+                i++;
             }
         }
     },
-    display: async function(cid) {
+    display: async function(cid,times) {
         for await (const data of node.cat(cid)) {
-          document.getElementById('cid').innerText = cid
-          document.getElementById('content').src = 'https://ipfs.io/ipfs/'+cid
-          document.getElementById('output').setAttribute('style', 'display: block')
+          document.getElementById('cid').innerText = document.getElementById('cid').innerText + cid + "\n";
+          document.getElementById('content').insertAdjacentHTML("afterend", "<img src = https://ipfs.io/ipfs/"+cid+">");
+          
         }
     },
     check: async function(){
         var tex = document.getElementById("ip");
-        console.log(tex.files[0]);
+        console.log(tex.files.length);
     }
 
 }

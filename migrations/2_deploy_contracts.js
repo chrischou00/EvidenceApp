@@ -1,5 +1,5 @@
 var Adoption = artifacts.require("Adoption");
-var power = artifacts.require("Cert");
+var power = artifacts.require("Evidence");
 
 module.exports = function (deployer) {
 
