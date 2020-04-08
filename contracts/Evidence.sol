@@ -12,7 +12,7 @@ contract Evidence{
     uint private case_num;
     
     constructor()public{
-        case_num = 0;
+        case_num = 1;
     }
     function add(string memory name, string memory hash, uint num, string memory about) public{
     
@@ -25,13 +25,23 @@ contract Evidence{
         if(num==0)
         {
             cases[case_num].push(temp);
+            case_num++;
         }
         else
         {
             cases[num].push(temp);
         }
     }
-    /*function show(uint num, uint item)public view returns(string memory, string memory, address, string memory){
+    
+    function show_case_num()public view returns(uint){
+        return case_num;
+    }
+    
+    function show_evi_num(uint num)public view returns(uint){
+        return cases[num].length;
+    }
+    
+    function show(uint num, uint item)public view returns(string memory, string memory, address, string memory){
         return (cases[num][item].name, cases[num][item].hash, cases[num][item].signer, cases[num][item].about);
-    }*/
+    }
 }
