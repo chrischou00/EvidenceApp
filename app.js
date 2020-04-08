@@ -77,12 +77,17 @@ App = {
             console.log(error);
           }
           var account = accounts[0];
-          console.log(name);
-          console.log(cid.string);
-          console.log(num);
-          console.log(about);
+          
           App.contracts.Cert.deployed().then(function(instance){
             return instance.add(name, cid.string, num, about, {from: account, gas: 5000000});
+          })
+          .then(function(result){
+            App.contracts.Cert.deployed().then(function(instance){
+              return instance.show_case_num().call();
+            })
+            .then(function(result){
+              alert("證據已成功上傳! 案件編號為"+result[0]);
+            })
           })
         })
       }

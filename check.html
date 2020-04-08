@@ -24,53 +24,11 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/web3.min.js"></script>
     <script src="js/truffle-contract.js"></script>
-    <script src="app.js"></script>
+    <script src="app2.js"></script>
   </head>
 
   <body>
-    <h1 class="text-center"></h1><br><br>
-    <p class="text-center">It's a system for users to manager their own attribute and sign others' attribute!</p>
-    <br>
-    <div class = "text-center" id = "add_data">
-      <h1>Attribute</h1>
-      Any thing can be an attribute and store into the space which is already, but here are some rules:<br>
-      <br>1. Attribute can't change name and be deleted, think before create.<br>
-      2. Every attribute must be updated in 30 days.<br>
-      Attribute name: <input type = "text" id = "name"><br><br>
-      Data:<input type="text" id="data"><br><br>
-      <button type="button" class="btn btn-default" id="ttbtn" onclick="App.AddAttribute()">Add Attribute</button>
-      <br><br><br>
-      You can see other's attribute if you know his/her Ethereum address.<br>
-      Key in the address and ID number, you can get information. <br>
-      ps. ID number is the sequence when the attribute is created.<br>
-      Target Address: <input type = "text" id = "target"><br><br>
-      Attribute ID:<input type="text" id="attr_id"><br><br>
-      <button type="button" class="btn btn-default" id="ttbtn" onclick="App.ShowAttribute()">Show Attribute</button>
-      <br><p id="cont"></p>
-      <br><br>
-      The "Extend Time" button is used to extend time of Attribute. <br>
-      If the owner didn't extend, the attribute can't be access, and signers' deposit will be confiscated.<br>
-      If you want to modify your attribute, you can press "Update Attribute" button, but should beware, the attribute will be reset.(Signatures will be cleared)<br>
-     <!-- <button type="button" class="btn btn-default" id="ttbtn" onclick="App.showMaster()">Show</button>-->
-      Attribute ID:<input type="text" id="time_id"><br><br>
-      Update Data:<input type="text" id="update_data"><br><br>
-      <button type="button" class="btn btn-default" id="ttbtn" onclick="App.Extend_time()">Extend Time</button>
-      <button type="button" class="btn btn-default" id="ttbtn" onclick="App.updateAttribute()">Update Attribute</button>
-      <br><br><p id="cont2"></p>
-
-    </div>
-    <div class = "text-center" id = "add_sign">
-      <h1>Sign</h1>
-      You can "sign" the other's attribute to represent your trust, but you must send deposit to sign it.<br>
-      But if the attribute didn't update in time, you won't get your money back! <br>
-      You must be sure the address you sign is worth to trust.<br>
-      You can cancel your signatures, and if the attribute still work well at that time,<br>
-      you can get your deposit back.<br><br>
-      Target Address: <input type="text" id="sign_target"><br><br>
-      Attribute ID:<input type="text" id="sign_id"><br><br>
-      <button type="button" class="btn btn-default" id="ttbtn" onclick="App.Sign()">Sign</button>
-      <button type="button" class="btn btn-default" id="ttbtn" onclick="App.revoke()">Revoke Signature</button><br><br>
-    </div>
+    <div id="show_block"></div>
   </body>
 
 </html>
