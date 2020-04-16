@@ -1,3 +1,28 @@
 body{
     background-color: #293241;
 }
+
+a:link{
+    text-decoration:none;
+    font-weight: 900;
+    border: white 1px;
+}
+
+a:visited {
+    color:#F9EA9A;
+}
+a:hover {
+    text-decoration: none;
+    color:#096;
+}
+
+.top30{
+    margin-top: 30px;
+}
+.top10{
+    margin-top: 10px;
+}
+
+.left10{
+    margin-left: 10px;
+}
