@@ -1,0 +1,13 @@
+a:link{
+    text-decoration:none;
+    font-weight: 900;
+    border: white 1px;
+}
+
+a:visited {
+    color:#F9EA9A;
+}
+a:hover {
+    text-decoration: none;
+    color:#096;
+}
