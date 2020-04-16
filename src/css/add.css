@@ -1,0 +1,97 @@
+body{
+    color: #F9EA9A;
+    font-size: 20px;
+}
+
+.contain{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.btn1{
+    padding: 15px;
+}
+
+.button {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #096;
+    border-radius: 50px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+}
+
+.button:hover {
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}
+
+div.file-box {
+    position:relative;
+    width:298px;
+    margin: auto;
+}
+    
+input.filename {
+    width:288px;
+    height:29px;
+    padding-left:8px;
+    
+    border:#515a69 1px solid;
+    border-radius:5px;
+    
+    color:#ffffff;
+    background-color: #515a69;
+    
+}
+
+input.button {
+    width:82px;
+    height:29px;
+    padding-left:13px;
+    
+    background-color:#096;
+    border:0;
+    border-radius:0 5px 5px 0;
+    position:absolute;
+    top:0;
+    right:0;
+    
+    color:#ffffff;
+    font-size:14px;
+    cursor:pointer;
+}
+    
+
+input.file {
+    width:297px;
+    height:24px;
+    
+    position:absolute;
+    top:0;
+    right:0;
+    
+    filter:alpha(opacity=0);
+    opacity:0;
+    
+    font-size:20px;
+    cursor:pointer;
+}
+
+.textipt{
+    border-radius:5px;
+    border:0;
+    background-color: #515a69;
+}
+
+.top30{
+    margin-top: 30px;
+}
+.top10{
+    margin-top: 10px;
+}
